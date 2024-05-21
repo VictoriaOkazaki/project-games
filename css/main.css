@@ -4,8 +4,17 @@ html {
 
 html,
 body {
-    height: 100vh;
+    height: calc(100vh - calc(100vh - 100%));
     overflow-x: hidden;
+}
+
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main {
