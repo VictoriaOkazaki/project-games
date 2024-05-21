@@ -2,12 +2,12 @@ const GAMES_LIST = [
     { id: '1', name: "Counter Strike 2", img: "img/img-1.jpg" },
     { id: '2', name: "Dota 2", img: "img/img-2.jpg" },
     { id: '3', name: "Assasin's Creed 2", img: "img/img-3.jpg" },
-    { id: '4', name: "Counter Strike 2", img: "img/img-1.jpg" },
-    { id: '5', name: "Dota 2", img: "img/img-2.jpg" },
-    { id: '6', name: "Assasin's Creed 2", img: "img/img-3.jpg" },
-    { id: '7', name: "Counter Strike 2", img: "img/img-1.jpg" },
-    { id: '8', name: "Dota 2", img: "img/img-2.jpg" },
-    { id: '9', name: "Assasin's Creed 2", img: "img/img-3.jpg" },
+    { id: '4', name: "Counter Strike 2 4", img: "img/img-4.jpg" },
+    { id: '5', name: "Dota 2 5", img: "img/img-5.jpg" },
+    { id: '6', name: "Assasin's Creed 2 6", img: "img/img-6.jpg" },
+    { id: '7', name: "Counter Strike 2 7", img: "img/img-7.jpg" },
+    { id: '8', name: "Dota 2 8", img: "img/img-8.jpg" },
+    { id: '9', name: "Assasin's Creed 2 9", img: "img/img-9.jpg" },
 ]
 
 function getGameImage(index) {
