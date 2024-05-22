@@ -246,8 +246,8 @@ a {
     top: -5px;
     left: -5px;
 
-    background: conic-gradient(#25780C,
-            #53DE1F var(--angle, 0deg),
+    background: conic-gradient(#26F095,
+            #43E3EB var(--angle, 0deg),
             transparent 0);
     /* animation: progress 2s linear; */
 
