@@ -7,6 +7,7 @@ function createSelect() {
     const selectedItem = document.getElementById('dropdown-selected')
     const select = document.getElementById("dropdown");
     const points = document.querySelector('.points-cont');
+    const circle = document.querySelector(".circle");
 
     function selectGame(game) {
         console.log("Select on change", game.name);
@@ -80,19 +81,19 @@ startSlider()
 
 //     prevGame = choosedGame
 // }
-const razEl = document.querySelector(".circle");
 const bigBtn = document.querySelector('.big-btn');
 const success = document.querySelector('.success-text');
+const circle = document.querySelector(".circle");
 
-razEl.addEventListener("animationend", () => {
-    razEl.style.animation = "";
+circle.addEventListener("animationend", () => {
+    circle.style.animation = "";
     success.style.display = 'block';
     setTimeout(() => { window.location.href = 'https://google.com' }, 1000);
 });
 
-razEl.onclick = () => {
+circle.onclick = () => {
     console.log("click works");
-    razEl.style.animation = `progress 4s linear`;
+    circle.style.animation = `progress 4s linear`;
     setTimeout(() => {
         bigBtn.classList.add('big-btn-glow')
     }, 800)
