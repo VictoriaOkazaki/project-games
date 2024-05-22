@@ -68,10 +68,11 @@ circle.addEventListener('animationend', function (e) {
     if (prevGame !== choosedGame) return;
     success.style.display = 'block';
     circle.classList.add('success');
+    setTimeout(() => { window.location.href = 'https://google.com' }, 1000)
+
 })
-let prevGame = ''
+let prevGame;
 bigBtn.onclick = () => {
-    if (choosedGame === '') return;
     if (prevGame === choosedGame) return;
 
     circle.classList.add('animation');
