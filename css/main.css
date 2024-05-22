@@ -163,7 +163,7 @@ a {
     position: relative;
 }
 
-@keyframes spin {
+/* @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
@@ -182,6 +182,7 @@ a {
     font-size: 24px;
     font-weight: 700;
     color: #dfdfdf;
+    filter: drop-shadow(17px 13px 7px rgba(190, 142, 22, 0.75));
 }
 
 .circle {
@@ -220,7 +221,73 @@ a {
 
 .circle.success::before {
     background: #25780C;
+} */
+
+/* big button animation */
+.big-btn {
+    position: relative;
+    height: 60%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #dfdfdf;
+    box-shadow: -6px -1px 6px -1px rgba(166, 166, 166, 0.8);
+    /* filter: drop-shadow(17px 13px 7px rgba(190, 142, 22, 0.75)); */
 }
+
+.circle {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    position: absolute;
+    border-radius: 100%;
+    background: none;
+    top: -5px;
+    left: -5px;
+
+    background: conic-gradient(#25780C,
+            #53DE1F var(--angle, 0deg),
+            transparent 0);
+    /* animation: progress 2s linear; */
+
+    --pie-b: 10px;
+    mask: radial-gradient(farthest-side,
+            #0000 calc(99% - var(--pie-b)),
+            #000 calc(100% - var(--pie-b)));
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes progress {
+    25% {
+        --angle: 360deg;
+    }
+
+    26%,
+    75% {
+        --angle: 360deg;
+    }
+
+    100% {
+        --angle: 0deg;
+    }
+}
+
+.big-btn-glow {
+    box-shadow: 1px 1px 18px 3px rgba(83, 222, 31, 0.8);
+}
+
+/* .shadow-box {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 7em;
+    aspect-ratio: 1;
+    border-radius: 50%;
+} */
 
 .success-text {
     color: #25780C;
