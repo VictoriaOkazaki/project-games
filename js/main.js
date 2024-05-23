@@ -10,7 +10,6 @@ function createSelect() {
     const circle = document.querySelector(".circle");
 
     function selectGame(game) {
-        console.log("Select on change", game.name);
         const index = GAMES_LIST.findIndex((el) => el.id === game.id);
         setSliderActiveIndex(index);
 
@@ -60,27 +59,6 @@ function createSelect() {
 createSelect()
 startSlider()
 
-// const bigBtn = document.querySelector('.big-btn')
-// const circle = document.querySelector('.circle')
-// const success = document.querySelector('.success-text')
-// circle.addEventListener('animationend', function (e) {
-//     circle.classList.remove('animation');
-//     circle.style.animation = '';
-//     if (prevGame !== choosedGame) return;
-//     success.style.display = 'block';
-//     circle.classList.add('success');
-//     setTimeout(() => { window.location.href = 'https://google.com' }, 1000)
-
-// })
-// let prevGame;
-// bigBtn.onclick = () => {
-//     if (prevGame === choosedGame) return;
-
-//     circle.classList.add('animation');
-//     circle.style.animation = 'spin 2s linear';
-
-//     prevGame = choosedGame
-// }
 const bigBtn = document.querySelector('.big-btn');
 const success = document.querySelector('.success-text');
 const circle = document.querySelector(".circle");
@@ -88,16 +66,13 @@ const circle = document.querySelector(".circle");
 circle.addEventListener("animationend", () => {
     circle.style.animation = "";
     success.style.display = 'block';
+    bigBtn.classList.remove('big-btn-glow');
     setTimeout(() => { window.location.href = 'https://google.com' }, 1000);
 });
 
 circle.onclick = () => {
-    console.log("click works");
-    circle.style.animation = `progress 4s linear`;
+    circle.style.animation = `progress 2s linear`;
     setTimeout(() => {
         bigBtn.classList.add('big-btn-glow')
-    }, 800)
-    setTimeout(() => {
-        bigBtn.classList.remove('big-btn-glow')
-    }, 3000)
+    }, 1800)
 };

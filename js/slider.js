@@ -34,13 +34,11 @@ function startSlider() {
 let swapTm;
 function prepareNextImage(curImg, nextImg) {
     const nextIndex = (curIndex + 1) % GAMES_LIST.length;
-    console.log("Change next image", nextIndex);
     nextImg.src = getGameImage(nextIndex);
     nextImg.style.transition = "";
     nextImg.style.transform = `translateX(100%)`;
     curIndex = nextIndex;
     swapTm = setTimeout(() => {
-        console.log("Swap images");
         setActivePoint(curIndex);
         changeActiveImage(curImg, nextImg);
     }, 3000);
@@ -63,13 +61,11 @@ function changeActiveImage(curImg, nextImg) {
 
     curImg.ontransitionend = () => {
         curImg.ontransitionend = null;
-        console.log("ontransitionend");
         prepareNextImage(nextImg, curImg);
     };
 }
 
 function setSliderActiveIndex(index) {
-    console.log("Set slider active index", index);
     setActivePoint(index);
     clearTimeout(swapTm);
 
